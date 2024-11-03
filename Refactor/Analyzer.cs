@@ -1,8 +1,6 @@
-using LevenshteinDistance;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Refactor.dto;
-using Soenneker.Utils.String.CosineSimilarity;
+using Refactor.utils;
 
 namespace Refactor;
 

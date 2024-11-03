@@ -8,9 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db884513-5b16-45b3-805f-35f3ff8e340c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Refactor/utils/RabinKarpSimilarity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Refactor/Analyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Analyzer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/utils/RabinKarpSimilarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/utils/RabinKarpSimilarity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Refactor.executor": "Debug",
+    ".NET Project.Refactor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -75,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730651562132</updated>
-      <workItem from="1730651563236" duration="10509000" />
+      <workItem from="1730651563236" duration="13915000" />
     </task>
     <servers />
   </component>
@@ -87,24 +87,5 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Refactor/Analyzer.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/Refactor/Analyzer.cs" containingFunctionPresentation="Method 'GetRefactorOpportunities'">
-            <startOffsets>
-              <option value="785" />
-            </startOffsets>
-            <endOffsets>
-              <option value="815" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
