@@ -8,7 +8,7 @@ namespace Refactor;
 
 public class Analyzer
 {
-    private const double MAX_ALLOWED_SIMILARITY = 80.0;
+    private const double MAX_ALLOWED_SIMILARITY = 0.8;
     private FileClassDeclarations[] ClassDeclarations { get; }
 
     private readonly List<RefactorOportunity> _refactorOpportunities  = new();
@@ -82,7 +82,6 @@ public class Analyzer
     {
         var aBody = a.Body?.ToString() ?? "";
         var bBody = b.Body?.ToString() ?? "";
-        return CosineSimilarityStringUtil.CalculateSimilarityPercentage(aBody, bBody) >= MAX_ALLOWED_SIMILARITY;
-        
+        return RabinKarpSimilarity.CalculateSimilarity(aBody, bBody) >= MAX_ALLOWED_SIMILARITY;
     }
 }
