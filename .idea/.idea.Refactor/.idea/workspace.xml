@@ -8,15 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db884513-5b16-45b3-805f-35f3ff8e340c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/Analyzer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/Refactor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/dto/CsFile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/dto/RefactorOportunity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/arquivo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/utils/FilesManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/Report.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Analyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Analyzer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Refactor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Refactor.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
@@ -48,6 +45,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "HotReloadSettingsPage",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,16 +77,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730651562132</updated>
-      <workItem from="1730651563236" duration="4616000" />
+      <workItem from="1730651563236" duration="9018000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Refactor/Analyzer.cs</url>
+          <line>85</line>
+          <properties documentPath="$PROJECT_DIR$/Refactor/Analyzer.cs" containingFunctionPresentation="Method 'CheckBodySimilarity'">
+            <startOffsets>
+              <option value="3018" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3093" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

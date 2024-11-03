@@ -1,6 +1,6 @@
 ﻿using Refactor.utils;
 
-namespace Refacor;
+namespace Refactor;
 
 class Program
 {
@@ -19,8 +19,11 @@ class Program
         var files = FilesManager.GetAllCsFilesFromDirectory(dirPath);
 
         var analyzer = new Analyzer(files);
-        
         analyzer.Analyze();
+        
+        var opportunities = analyzer.GetRefactorOpportunities();
+        
+        Report.GenerateReport(opportunities);
     }
     
 }
