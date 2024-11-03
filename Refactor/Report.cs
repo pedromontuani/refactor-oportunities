@@ -24,10 +24,16 @@ public static class Report
             var newMethodName = $"{methodA}{methodB}CommonMethod";
             
             Console.WriteLine($"Oportunidade de refatoração encontrada nas classes {classNameA} e {classNameB}");
+            Console.WriteLine();
+            Console.WriteLine($"{classNameA}: {fileA}");
+            Console.WriteLine($"{classNameB}: {fileB}");
+            Console.WriteLine();
             Console.WriteLine($"Métodos {methodA} e {methodB} são similares");
             Console.WriteLine();
             Console.WriteLine("Sugestão de refatoração:");
+            Console.WriteLine();
             Console.WriteLine("Crie uma nova classe e implemente um método comum. Ex.:");
+            Console.WriteLine();
             Console.WriteLine($"class {newClassName}");
             Console.WriteLine("{");
             Console.WriteLine($"    public {returnTypeA} {newMethodName}({formattedParamsA})");
@@ -38,6 +44,7 @@ public static class Report
             Console.WriteLine();
             
             Console.WriteLine($"Modifique as classes {classNameA} e {classNameB} para utilizarem a nova classe:");
+            Console.WriteLine();
             Console.WriteLine($"class {classNameA} : {newClassName}");
             Console.WriteLine("{");
             Console.WriteLine($"    public {returnTypeA} {newMethodName}({formattedParamsA}) : base({formattedParamsA})");
@@ -51,8 +58,8 @@ public static class Report
             Console.WriteLine("          // Mantenha apenas membros específicos dessa classe");
             Console.WriteLine("     }");
             Console.WriteLine("}");
-            
-            Console.WriteLine("\n----------------------------------------------------------------\n");
+            Console.WriteLine("\n----------------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------------\n");
         }
     }
     
