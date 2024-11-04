@@ -22,9 +22,26 @@ public class Analyzer
         CheckSimilarNodes();
     }
     
-    public List<RefactorOportunity> GetRefactorOpportunities()
+    public Dictionary<MethodDeclarationSyntax, List<Relationship>> GetRefactorOpportunities()
     {
-        return _refactorOpportunities;
+        var relationships = new Dictionary<MethodDeclarationSyntax, List<Relationship>>();
+        foreach (var opportunity in _refactorOpportunities)
+        {
+            if (relationships.ContainsKey(opportunity.methodA))
+            {
+                var relationship = new Relationship(opportunity.fileB, opportunity.methodB);
+                relationships[opportunity.methodA].Add(relationship);
+            }
+            else
+            {
+                var methodA = new Relationship(opportunity.fileA, opportunity.methodA);
+                var methodB = new Relationship(opportunity.fileB, opportunity.methodB);
+                var list = new List<Relationship> {methodA, methodB};
+                
+                relationships[opportunity.methodA] = list;
+            }
+        }
+        return relationships;
     }
 
     private void CheckSimilarNodes()

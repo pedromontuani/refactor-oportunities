@@ -5,59 +5,59 @@ namespace Refactor;
 
 public static class Report
 {
-    public static void GenerateReport(IEnumerable<RefactorOportunity> refactorOportunities) 
+    public static void GenerateReport(Dictionary<MethodDeclarationSyntax, List<Relationship>> relationships) 
     {
-        foreach (var refactorOportunity in refactorOportunities)
+        foreach (var relationship in relationships.Keys)
         {
-            var fileA = refactorOportunity.fileA.parent.path;
-            var fileB = refactorOportunity.fileB.parent.path;
-            var classNameA = refactorOportunity.fileA.classDeclaration.Identifier.Text;
-            var classNameB = refactorOportunity.fileB.classDeclaration.Identifier.Text;
-            var returnTypeA = refactorOportunity.methodA.ReturnType.ToString();
-            var methodParamsA = refactorOportunity.methodA.ParameterList.Parameters;
-            var methodA = refactorOportunity.methodA.Identifier.Text;
-            var methodB = refactorOportunity.methodB.Identifier.Text;
+            var classDeclarationA = relationships[relationship][0].classDeclaration;
+            var methodA = relationships[relationship][0].methodDeclaration;
+            var fileA = classDeclarationA.parent.path;
+            var methodParamsA = methodA.ParameterList.Parameters;
+            var returnTypeA = methodA.ReturnType.ToString();
             
-            var formattedParamsA = GetFormattedParamsList(methodParamsA);
-            
-            var newClassName = $"{classNameA}{classNameB}Superclass";
-            var newMethodName = $"{methodA}{methodB}CommonMethod";
-            
-            Console.WriteLine($"Oportunidade de refatoração encontrada nas classes {classNameA} e {classNameB}");
+            var foundClassesNames = relationships[relationship].Select(r => r.classDeclaration.classDeclaration.Identifier.Text).ToList();
+            var foundMethodNames = relationships[relationship].Select(r => r.methodDeclaration.Identifier.Text).ToList();
+            Console.WriteLine($"Oportunidade de refatoração encontrada nas classes {string.Join(", ", foundClassesNames)}");
             Console.WriteLine();
-            Console.WriteLine($"{classNameA}: {fileA}");
-            Console.WriteLine($"{classNameB}: {fileB}");
+
+            foreach (var relation in relationships[relationship])
+            {
+                var className = relation.classDeclaration.classDeclaration.Identifier.Text;
+                var file = relation.classDeclaration.parent.path;
+                Console.WriteLine($"{className}: {file}");
+            }
+            
             Console.WriteLine();
-            Console.WriteLine($"Métodos {methodA} e {methodB} são similares");
+            Console.WriteLine($"Métodos {string.Join(", ", foundMethodNames)} são similares");
             Console.WriteLine();
             Console.WriteLine("Sugestão de refatoração:");
             Console.WriteLine();
             Console.WriteLine("Crie uma nova classe e implemente um método comum. Ex.:");
             Console.WriteLine();
-            Console.WriteLine($"class {newClassName}");
+            Console.WriteLine($"class NewSuperclass");
             Console.WriteLine("{");
-            Console.WriteLine($"    public {returnTypeA} {newMethodName}({formattedParamsA})");
+            Console.WriteLine($"    public {returnTypeA} NewMethod({methodParamsA})");
             Console.WriteLine("    {");
             Console.WriteLine("        // Implementação do método comum");
             Console.WriteLine("    }");
             Console.WriteLine("}");
             Console.WriteLine();
+            Console.WriteLine($"Modifique as subclasses para utilizarem a nova classe:");
             
-            Console.WriteLine($"Modifique as classes {classNameA} e {classNameB} para utilizarem a nova classe:");
-            Console.WriteLine();
-            Console.WriteLine($"class {classNameA} : {newClassName}");
-            Console.WriteLine("{");
-            Console.WriteLine($"    public {returnTypeA} {newMethodName}({formattedParamsA}) : base({formattedParamsA})");
-            Console.WriteLine("          // Mantenha apenas membros específicos dessa classe");
-            Console.WriteLine("     }");
-            Console.WriteLine("}");
-            Console.WriteLine();
-            Console.WriteLine($"class {classNameB} : {newClassName}");
-            Console.WriteLine("{");
-            Console.WriteLine($"    public {returnTypeA} {newMethodName}({formattedParamsA}) : base({formattedParamsA})");
-            Console.WriteLine("          // Mantenha apenas membros específicos dessa classe");
-            Console.WriteLine("     }");
-            Console.WriteLine("}");
+            foreach (var relation in relationships[relationship])
+            {
+                var className = relation.classDeclaration.classDeclaration.Identifier.Text;
+                
+                Console.WriteLine();
+                Console.WriteLine($"class {className} : NewSuperclass");
+                Console.WriteLine("{");
+                Console.WriteLine($"    public {returnTypeA} NewMethod({methodParamsA}) : base({methodParamsA})");
+                Console.WriteLine("          // Mantenha apenas membros específicos dessa classe");
+                Console.WriteLine("     }");
+                Console.WriteLine("}");
+                Console.WriteLine();
+            }
+            
             Console.WriteLine("\n----------------------------------------------------------------");
             Console.WriteLine("----------------------------------------------------------------\n");
         }
