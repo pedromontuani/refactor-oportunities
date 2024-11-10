@@ -14,4 +14,17 @@
       <PackageReference Include="Soenneker.Utils.String.CosineSimilarity" Version="2.1.591" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="refactor\classes\" />
+      <Folder Include="refactor\interfaces\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="refactor\GeneratedInterface0.cs" />
+      <Compile Remove="refactor\GeneratedInterface1.cs" />
+      <Compile Remove="refactor\GeneratedInterface2.cs" />
+      <Compile Remove="refactor\GeneratedInterface3.cs" />
+      <Compile Remove="refactor\GeneratedInterface4.cs" />
+    </ItemGroup>
+
 </Project>

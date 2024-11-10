@@ -8,10 +8,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db884513-5b16-45b3-805f-35f3ff8e340c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Refactor/dto/Relationship.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/Refactor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/dto/InterfaceMembers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/Animal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/AnotherClass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/Cat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/Dog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/ExampleClass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/testes/ExampleClassDuplicate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/utils/StringUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Refactor/utils/SyntaxUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Refactor/Analyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Analyzer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Report.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Refactor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Refactor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/testes/arquivo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/utils/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/utils/FilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/utils/RabinKarpSimilarity.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +38,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2oLayDlZMAjH2fOB6CP5bTt12jh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,7 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Refactor.executor": "Run",
+    ".NET Project.Refactor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -44,14 +64,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Refactor" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Refactor/bin/Debug/net8.0/Refactor" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="testes" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Refactor/" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -76,7 +96,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730651562132</updated>
-      <workItem from="1730651563236" duration="19631000" />
+      <workItem from="1730651563236" duration="22438000" />
+      <workItem from="1730743947234" duration="4791000" />
+      <workItem from="1731240738162" duration="15890000" />
     </task>
     <servers />
   </component>
@@ -88,5 +110,24 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Refactor/Program.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/Refactor/Program.cs" containingFunctionPresentation="Method 'Main'">
+            <startOffsets>
+              <option value="633" />
+            </startOffsets>
+            <endOffsets>
+              <option value="688" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

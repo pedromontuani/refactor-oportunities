@@ -61,4 +61,13 @@ public static class FilesManager
         return File.ReadAllText(path);
     }
 
+    public static void InitOutputDirectory(string path)
+    {
+        if (Directory.Exists(path))
+        {
+            Directory.Delete(path, true);
+        }
+        
+        Directory.CreateDirectory(path);
+    }
 }

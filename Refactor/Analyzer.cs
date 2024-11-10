@@ -6,7 +6,6 @@ namespace Refactor;
 
 public class Analyzer
 {
-    private const double MAX_ALLOWED_SIMILARITY = 0.8;
     private FileClassDeclarations[] ClassDeclarations { get; }
 
     private readonly List<RefactorOportunity> _refactorOpportunities  = new();
@@ -22,15 +21,17 @@ public class Analyzer
         CheckSimilarNodes();
     }
     
-    public Dictionary<MethodDeclarationSyntax, List<Relationship>> GetRefactorOpportunities()
+    public Dictionary<string, List<Relationship>> GetRefactorOpportunities()
     {
-        var relationships = new Dictionary<MethodDeclarationSyntax, List<Relationship>>();
+        var relationships = new Dictionary<string, List<Relationship>>();
         foreach (var opportunity in _refactorOpportunities)
         {
-            if (relationships.ContainsKey(opportunity.methodA))
+            var dictKey = StringUtils.GetFormattedMethodName(opportunity.methodA);
+            
+            if (relationships.ContainsKey(dictKey))
             {
                 var relationship = new Relationship(opportunity.fileB, opportunity.methodB);
-                relationships[opportunity.methodA].Add(relationship);
+                relationships[dictKey].Add(relationship);
             }
             else
             {
@@ -38,11 +39,13 @@ public class Analyzer
                 var methodB = new Relationship(opportunity.fileB, opportunity.methodB);
                 var list = new List<Relationship> {methodA, methodB};
                 
-                relationships[opportunity.methodA] = list;
+                relationships[dictKey] = list;
             }
         }
         return relationships;
     }
+    
+    
 
     private void CheckSimilarNodes()
     {
@@ -70,9 +73,9 @@ public class Analyzer
             {
                 var sameReturnType = HasSameReturnType(aMethod, bMethod);
                 var sameParameters = HasSameParameters(aMethod, bMethod);
-                var areSimilar = CheckBodySimilarity(aMethod, bMethod);
+                var hasSameName = HasSameName(aMethod, bMethod);
 
-                if (sameReturnType && sameParameters && areSimilar)
+                if (sameReturnType && sameParameters && hasSameName)
                 {
                     _refactorOpportunities.Add(new RefactorOportunity(a, b, aMethod, bMethod));
                 }
@@ -93,10 +96,8 @@ public class Analyzer
     }
     
 
-    private bool CheckBodySimilarity(MethodDeclarationSyntax a, MethodDeclarationSyntax b)
+    private bool HasSameName(MethodDeclarationSyntax a, MethodDeclarationSyntax b)
     {
-        var aBody = a.Body?.ToString() ?? "";
-        var bBody = b.Body?.ToString() ?? "";
-        return RabinKarpSimilarity.CalculateSimilarity(aBody, bBody) >= MAX_ALLOWED_SIMILARITY;
+        return a.Identifier.Text == b.Identifier.Text;
     }
 }
