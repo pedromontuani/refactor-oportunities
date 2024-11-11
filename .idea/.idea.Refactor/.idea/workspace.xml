@@ -8,24 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db884513-5b16-45b3-805f-35f3ff8e340c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Refactor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/Refactor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/dto/InterfaceMembers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/Animal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/AnotherClass.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/Cat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/Dog.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/ExampleClass.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/testes/ExampleClassDuplicate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/utils/StringUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Refactor/utils/SyntaxUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Refactor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/Analyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Analyzer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Refactor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/Refactor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Refactor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/testes/arquivo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/utils/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/utils/FilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Refactor/utils/RabinKarpSimilarity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Refactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Refactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactor/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Refactor/Report.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +42,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Refactor.executor": "Debug",
+    ".NET Project.Refactor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "design-pattern",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,7 +84,7 @@
       <updated>1730651562132</updated>
       <workItem from="1730651563236" duration="22438000" />
       <workItem from="1730743947234" duration="4791000" />
-      <workItem from="1731240738162" duration="15890000" />
+      <workItem from="1731240738162" duration="17490000" />
     </task>
     <servers />
   </component>
@@ -110,24 +96,5 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Refactor/Program.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Refactor/Program.cs" containingFunctionPresentation="Method 'Main'">
-            <startOffsets>
-              <option value="633" />
-            </startOffsets>
-            <endOffsets>
-              <option value="688" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

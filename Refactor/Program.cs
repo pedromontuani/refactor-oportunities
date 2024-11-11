@@ -25,8 +25,9 @@ class Program
         var opportunities = analyzer.GetRefactorOpportunities();
         var refactor = new Refactor(opportunities, outputPath);
         refactor.GenerateRefactor();
+        var result = refactor.GetRefactorsCount();
         
-        // Report.GenerateReport(opportunities);
+        Report.GenerateReport(result, outputPath);
     }
     
     private static void CheckArgs(string[] args)

@@ -36,6 +36,11 @@ public class Refactor(Dictionary<string, List<Relationship>> relationships, stri
         
     }
     
+    public int GetRefactorsCount()
+    {
+        return _interfaceMembersList.Count;
+    }
+    
     private List<InterfaceMembers> GetMergedMethodsAndClasses()
     {
         var interfaceMembers = new List<InterfaceMembers>();
